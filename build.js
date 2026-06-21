@@ -476,15 +476,21 @@ const html = `<!DOCTYPE html>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>${escapeHtml(site.title)} - ${escapeHtml(site.tagline)}</title>
+    <meta name="title" content="${escapeAttr(site.title)} - ${escapeAttr(site.tagline)}" />
     <meta name="description" content="${escapeAttr(site.description)}" />
-    <meta property="og:title" content="${escapeAttr(site.title)}" />
+    <meta name="keywords" content="developer tools, html tools, single file, no dependencies, open source, web tools, SEO, JSON, CSS, accessibility" />
+    <meta property="og:title" content="${escapeAttr(site.title)} - ${escapeAttr(site.tagline)}" />
+    <meta property="og:site_name" content="${escapeAttr(site.title)}" />
+    <meta property="og:url" content="${escapeAttr(site.url)}/" />
     <meta property="og:description" content="${escapeAttr(site.description)}" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="${escapeAttr(site.url)}" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="${escapeAttr(site.title)}" />
-    <meta name="twitter:description" content="${escapeAttr(site.description)}" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>\uD83D\uDEE0\uFE0F</text></svg>" />
+    <meta property="og:image" content="${escapeAttr(site.url)}/thumb.png" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="${escapeAttr(site.url)}/" />
+    <meta property="twitter:title" content="${escapeAttr(site.title)} - ${escapeAttr(site.tagline)}" />
+    <meta property="twitter:description" content="${escapeAttr(site.description)}" />
+    <meta property="twitter:image" content="${escapeAttr(site.url)}/thumb.png" />
+    <link rel="shortcut icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>\uD83D\uDEE0\uFE0F</text></svg>" />
     <style>
       /* ========================================
          Custom Properties
