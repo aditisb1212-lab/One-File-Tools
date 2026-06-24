@@ -30,12 +30,12 @@ Every tool in this collection is a standalone `.html` file containing all the HT
 
 | # | Tool                                                          | Category            | Description                                                                                                                      | Live                                                                     |
 | - | ------------------------------------------------------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| 1 | [Aspect Ratio Calculator](tools/aspect-ratio-calculator.html) | CSS Tools           | Calculate and simplify aspect ratios instantly. Supports common presets and outputs decimal ratio and CSS padding-bottom values. | [Try it](https://one-file-tools.pages.dev/tools/aspect-ratio-calculator) |
-| 2 | [Clip Path Generator](tools/clip-path-generator.html)         | CSS Tools           | Visually create complex CSS clip-path shapes and instantly copy the generated code.                                              | [Try it](https://one-file-tools.pages.dev/tools/clip-path-generator)     |
-| 3 | [Favicon Generator](tools/favicon-generator.html)             | Developer Utilities | Generate a complete favicon pack and integration tags from any image, offline.                                                   | [Try it](https://one-file-tools.pages.dev/tools/favicon-generator)       |
-| 4 | [JSON Formatter](tools/json-formatter.html)                   | JSON & API          | Format, validate, and minify JSON locally in your browser.                                                                       | [Try it](https://one-file-tools.pages.dev/tools/json-formatter)          |
-| 5 | [Open Graph Inspector](tools/open-graph-inspector.html)       | Web & SEO           | Analyze meta tags, social previews, and SEO metadata for any URL with actionable scores.                                         | [Try it](https://one-file-tools.pages.dev/tools/open-graph-inspector)    |
-| 6 | [Border Radius Generator](tools/border-radius-generator.html) | CSS Tools           | Visually create CSS border-radius values with live preview, presets, and copy-ready CSS output.                                  | [Try it](https://one-file-tools.pages.dev/tools/border-radius-generator) |
+| 1 | [Aspect Ratio Calculator](tools/aspect-ratio-calculator.html) | Image Tools         | Calculate and simplify aspect ratios instantly. Supports common presets and outputs decimal ratio and CSS padding-bottom values. | [Try it](https://one-file-tools.pages.dev/tools/aspect-ratio-calculator) |
+| 2 | [Border Radius Generator](tools/border-radius-generator.html) | CSS Tools           | Visually create CSS border-radius values with live preview, presets, and copy-ready CSS output.                                  | [Try it](https://one-file-tools.pages.dev/tools/border-radius-generator) |
+| 3 | [Clip Path Generator](tools/clip-path-generator.html)         | CSS Tools           | Visually create complex CSS clip-path shapes and instantly copy the generated code.                                              | [Try it](https://one-file-tools.pages.dev/tools/clip-path-generator)     |
+| 4 | [Favicon Generator](tools/favicon-generator.html)             | Developer Utilities | Generate a complete favicon pack and integration tags from any image, offline.                                                   | [Try it](https://one-file-tools.pages.dev/tools/favicon-generator)       |
+| 5 | [JSON Formatter](tools/json-formatter.html)                   | JSON & API          | Format, validate, and minify JSON locally in your browser.                                                                       | [Try it](https://one-file-tools.pages.dev/tools/json-formatter)          |
+| 6 | [Open Graph Inspector](tools/open-graph-inspector.html)       | Web & SEO           | Analyze meta tags, social previews, and SEO metadata for any URL with actionable scores.                                         | [Try it](https://one-file-tools.pages.dev/tools/open-graph-inspector)    |
 | 7 | [UUID Generator](tools/uuid-generator.html)                   | Developer Utilities | Generate random v4 UUIDs instantly, offline.                                                                                     | [Try it](https://one-file-tools.pages.dev/tools/uuid-generator)          |
 
 
@@ -65,10 +65,10 @@ Below is a curated list of tool ideas waiting to be built. Each idea is a potent
 | -------------------------------------------------------------------- | ---------- |
 | Image Dimension Checker — inspect width, height, and aspect ratio    | Easy       |
 | Responsive Image Simulator — preview images at different breakpoints | Medium     |
-| Aspect Ratio Calculator — calculate and convert aspect ratios        | Easy       |
+| ~~Aspect Ratio Calculator~~ — ✅ [Built](tools/aspect-ratio-calculator.html) | Easy       |
 | SVG Previewer — paste and preview SVG code instantly                 | Easy       |
 | Base64 Image Converter — convert images to/from Base64               | Easy       |
-| Favicon Generator — create favicons from images                      | Medium     |
+| ~~Favicon Generator~~ — ✅ [Built](tools/favicon-generator.html)     | Medium     |
 | Image Metadata Viewer — read EXIF and other metadata                 | Medium     |
 | Color Palette Extractor — extract dominant colors from an image      | Medium     |
 
@@ -88,7 +88,7 @@ Below is a curated list of tool ideas waiting to be built. Each idea is a potent
 | Idea                                                        | Difficulty |
 | ----------------------------------------------------------- | ---------- |
 | Box Shadow Generator — design box shadows with live preview | Easy       |
-| Border Radius Generator — visualize border-radius values    | Easy       |
+| ~~Border Radius Generator~~ — ✅ [Built](tools/border-radius-generator.html) | Easy       |
 | Glassmorphism Generator — create frosted glass effects      | Easy       |
 | Neumorphism Generator — create soft UI / neumorphic styles  | Easy       |
 | CSS Grid Generator — build CSS Grid layouts visually        | Medium     |
