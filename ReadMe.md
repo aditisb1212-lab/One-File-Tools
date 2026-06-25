@@ -37,11 +37,13 @@ Every tool in this collection is a standalone `.html` file containing all the HT
 | 5 | [Favicon Generator](tools/favicon-generator.html) | Developer Utilities | Generate a complete favicon pack and integration tags from any image, offline. | [Try it](https://one-file-tools.pages.dev/tools/favicon-generator) |
 | 6 | [GitHub Token Validator Plain](tools/github-token-validator-plain.html) | Developer Utilities | Validate GitHub personal access tokens with a plain vanilla web interface. | [Try it](https://one-file-tools.pages.dev/tools/github-token-validator-plain) |
 | 7 | [GitHub Token Validator Retro](tools/github-token-validator-retro.html) | Developer Utilities | Validate GitHub personal access tokens with a retro terminal-style interface. | [Try it](https://one-file-tools.pages.dev/tools/github-token-validator-retro) |
-| 8 | [Glassmorphism Generator](tools/glassmorphism-generator.html) | CSS Tools | Generate sleek, frosted-glass UI effects for your components. | [Try it](https://one-file-tools.pages.dev/tools/glassmorphism-generator) |
-| 9 | [JSON Formatter](tools/json-formatter.html) | JSON & API | Format, validate, and minify JSON locally in your browser. | [Try it](https://one-file-tools.pages.dev/tools/json-formatter) |
-| 10 | [JWT Decoder](tools/jwt-decoder.html) | JSON & API | Decode and inspect JSON Web Tokens — header, payload, claims, and expiry — entirely in your browser. | [Try it](https://one-file-tools.pages.dev/tools/jwt-decoder) |
-| 11 | [Open Graph Inspector](tools/open-graph-inspector.html) | Web & SEO | Analyze meta tags, social previews, and SEO metadata for any URL with actionable scores. | [Try it](https://one-file-tools.pages.dev/tools/open-graph-inspector) |
-| 12 | [UUID Generator](tools/uuid-generator.html) | Developer Utilities | Generate random v4 UUIDs instantly, offline. | [Try it](https://one-file-tools.pages.dev/tools/uuid-generator) |
+| 8 | [GitHub Token Validator Terminal](tools/github-token-validator-terminal.html) | Developer Utilities | Validate GitHub Personal Access Tokens with a terminal-style UI that displays user identity and scopes. | [Try it](https://one-file-tools.pages.dev/tools/github-token-validator-terminal) |
+| 9 | [Glassmorphism Generator](tools/glassmorphism-generator.html) | CSS Tools | Generate sleek, frosted-glass UI effects for your components. | [Try it](https://one-file-tools.pages.dev/tools/glassmorphism-generator) |
+| 10 | [JSON Formatter](tools/json-formatter.html) | JSON & API | Format, validate, and minify JSON locally in your browser. | [Try it](https://one-file-tools.pages.dev/tools/json-formatter) |
+| 11 | [JWT Decoder](tools/jwt-decoder.html) | JSON & API | Decode and inspect JSON Web Tokens — header, payload, claims, and expiry — entirely in your browser. | [Try it](https://one-file-tools.pages.dev/tools/jwt-decoder) |
+| 12 | [Open Graph Inspector](tools/open-graph-inspector.html) | Web & SEO | Analyze meta tags, social previews, and SEO metadata for any URL with actionable scores. | [Try it](https://one-file-tools.pages.dev/tools/open-graph-inspector) |
+| 13 | [Palette Generator](tools/palette-generator.html) | Color Tools | Generate unique, collision-free variation color schemes based on color theory metrics, offline. | [Try it](https://one-file-tools.pages.dev/tools/palette-generator) |
+| 14 | [UUID Generator](tools/uuid-generator.html) | Developer Utilities | Generate random v4 UUIDs instantly, offline. | [Try it](https://one-file-tools.pages.dev/tools/uuid-generator) |
 
 > **Want to see your tool here?** Check out the [Contributing Guide](Contributing.md) and pick an idea from the [Ideas Board](#ideas-board).
 
@@ -82,7 +84,7 @@ Below is a curated list of tool ideas waiting to be built. Each idea is a potent
 | ---------------------------------------------------------- | ---------- |
 | Color Picker — pick colors with HEX, RGB, HSL output       | Easy       |
 | Contrast Checker — verify WCAG contrast ratios             | Easy       |
-| Palette Generator — generate harmonious color palettes     | Medium     |
+| ~~Palette Generator~~ — ✅ [Built](tools/palette-generator.html) | Medium     |
 | Gradient Builder — create CSS gradients visually           | Easy       |
 | CSS Color Converter — convert between HEX, RGB, HSL, OKLCH | Easy      |
 | Tailwind Color Finder — find the closest Tailwind color    | Easy       |
