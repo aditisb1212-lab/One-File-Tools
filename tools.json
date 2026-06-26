@@ -74,6 +74,26 @@
   ],
   "tools": [
     {
+      "id": "api-response-mocker",
+      "name": "API Response Mocker",
+      "shortDescription": "Create mock API endpoints from JSON responses.",
+      "longDescription": "## API Response Mocker\n\nCreate temporary mock API endpoints using JSON definitions.\n\n### Features\n\n- Define JSON responses\n- Mock API endpoints\n- Support multiple HTTP methods\n- Preview responses",
+      "category": "json-api",
+      "tags": [
+        "api",
+        "json",
+        "mock",
+        "service-worker"
+      ],
+      "techStack": [
+        "CSS3",
+        "HTML5",
+        "Vanilla JS"
+      ],
+      "difficulty": "Medium",
+      "status": "live"
+    },
+    {
       "id": "aspect-ratio-calculator",
       "name": "Aspect Ratio Calculator",
       "shortDescription": "Calculate and simplify aspect ratios instantly. Supports common presets and outputs decimal ratio and CSS padding-bottom values.",

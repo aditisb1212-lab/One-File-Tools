@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Response Mocker — One File Tools</title>
+
+    <style>
+      /* ========================================
+       Reset & Base
+       ======================================== */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.6;
+        padding: 2rem;
+        max-width: 960px;
+        margin: 0 auto;
+        background: #fafafa;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+
+      /* ========================================
+       Dark Mode
+       ======================================== */
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: #0a0a0a;
+          color: #e5e5e5;
+        }
+
+        textarea,
+        input,
+        select,
+        pre {
+          background: #1a1a1a;
+          color: #fff;
+          border-color: #444;
+        }
+
+        button {
+          background: #2563eb;
+        }
+      }
+
+      /* ========================================
+       Tool Styles
+       ======================================== */
+
+      .container {
+        display: grid;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      label {
+        font-weight: 600;
+      }
+
+      input,
+      select,
+      textarea {
+        padding: 0.8rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 1rem;
+      }
+
+      textarea {
+        min-height: 250px;
+        resize: vertical;
+        font-family: monospace;
+      }
+
+      button {
+        padding: 0.8rem 1.5rem;
+        border: none;
+        border-radius: 8px;
+        background: #2563eb;
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      button:hover {
+        opacity: 0.9;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .output-box {
+        margin-top: 1rem;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+      }
+
+      pre {
+        background: #f4f4f4;
+        padding: 1rem;
+        border-radius: 8px;
+        overflow-x: auto;
+        white-space: pre-wrap;
+      }
+
+      .status {
+        margin-top: 1rem;
+        font-weight: bold;
+      }
+
+      footer {
+        margin-top: 3rem;
+        text-align: center;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 1rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>API Response Mocker</h1>
+      <p>
+        Define a JSON response and instantly preview a mock API response.
+      </p>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="form-group">
+          <label for="endpoint">Mock Endpoint</label>
+          <input
+            type="text"
+            id="endpoint"
+            value="/api/user"
+            placeholder="/api/user"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="method">HTTP Method</label>
+          <select id="method">
+            <option>GET</option>
+            <option>POST</option>
+            <option>PUT</option>
+            <option>DELETE</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="statusCode">Status Code</label>
+          <select id="statusCode">
+            <option>200</option>
+            <option>201</option>
+            <option>400</option>
+            <option>404</option>
+            <option>500</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="jsonInput">JSON Response</label>
+
+          <textarea id="jsonInput">
+{
+  "name": "Aditi",
+  "role": "Developer",
+  "active": true
+}
+          </textarea>
+        </div>
+
+        <div class="buttons">
+          <button id="previewBtn">Generate Mock Response</button>
+          <button id="copyBtn">Copy JSON</button>
+        </div>
+
+        <div class="status" id="status"></div>
+
+        <div class="output-box">
+          <h3>Mock Endpoint Preview</h3>
+
+          <p><strong>Endpoint:</strong> <span id="endpointText"></span></p>
+
+          <p><strong>Method:</strong> <span id="methodText"></span></p>
+
+          <p><strong>Status:</strong> <span id="statusText"></span></p>
+
+          <h4>Response</h4>
+
+          <pre id="output">No response generated yet.</pre>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        Part of
+        <a href="https://github.com/praveenscience/One-File-Tools">
+          One File Tools
+        </a>
+      </p>
+    </footer>
+
+    <script>
+      const previewBtn = document.getElementById("previewBtn");
+      const copyBtn = document.getElementById("copyBtn");
+
+      const jsonInput = document.getElementById("jsonInput");
+      const endpoint = document.getElementById("endpoint");
+      const method = document.getElementById("method");
+      const statusCode = document.getElementById("statusCode");
+
+      const output = document.getElementById("output");
+      const endpointText = document.getElementById("endpointText");
+      const methodText = document.getElementById("methodText");
+      const statusText = document.getElementById("statusText");
+      const status = document.getElementById("status");
+
+      previewBtn.addEventListener("click", () => {
+        try {
+          const parsedJSON = JSON.parse(jsonInput.value);
+
+          endpointText.textContent = endpoint.value;
+          methodText.textContent = method.value;
+          statusText.textContent = statusCode.value;
+
+          output.textContent = JSON.stringify(parsedJSON, null, 2);
+
+          status.textContent = "✅ Mock response generated successfully.";
+        } catch (error) {
+          output.textContent = "Invalid JSON";
+          status.textContent =
+            "❌ Please enter valid JSON before generating.";
+        }
+      });
+
+      copyBtn.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(output.textContent);
+          status.textContent = "📋 Response copied to clipboard.";
+        } catch (error) {
+          status.textContent = "❌ Failed to copy.";
+        }
+      });
+    </script>
+  </body>
+</html>
