@@ -525,6 +525,26 @@
       "status": "live"
     },
     {
+  "id": "api-response-mocker",
+  "name": "API Response Mocker",
+  "shortDescription": "Create mock API endpoints from JSON responses.",
+  "longDescription": "## API Response Mocker\n\nCreate temporary mock API endpoints using JSON definitions.\n\n### Features\n\n- Define JSON responses\n- Mock API endpoints\n- Support multiple HTTP methods\n- Preview responses",
+  "category": "json-api",
+  "tags": [
+    "api",
+    "mock",
+    "json",
+    "service-worker"
+  ],
+  "techStack": [
+    "HTML5",
+    "CSS3",
+    "Vanilla JS"
+  ],
+  "difficulty": "Medium",
+  "status": "live"
+},
+    {
       "id": "uuid-generator",
       "name": "UUID Generator",
       "shortDescription": "Generate random v4 UUIDs instantly, offline.",
