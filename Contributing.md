@@ -206,7 +206,7 @@ Valid category IDs: `accessibility`, `browser-network`, `color`, `css`, `utiliti
 
 ### Step 6 — Add a screenshot
 
-Take a screenshot of your tool and save it as `tools/your-tool-name.png` (same name as the HTML file, kebab-case).
+Take a screenshot of your tool and save it as `tools/your-tool-name.png` (same name as the HTML file, kebab-case). Recommended size: **1280×720** (16:9 aspect ratio) for crisp display without cropping.
 
 ### Step 7 — Sort and normalize `tools.json`
 
@@ -380,7 +380,7 @@ This is how your theme appears on the landing page — similar to how `tools.jso
 
 ### Add a screenshot
 
-Take a screenshot of your generated theme and save it as `[id].png` next to the `.hbs` template (e.g., `resume/minimal.png`). The screenshot is shown on the landing page theme card.
+Take a screenshot of your generated theme and save it as `[id].png` next to the `.hbs` template (e.g., `resume/minimal.png`). Recommended size: **1280×720** (16:9 aspect ratio) for crisp display without cropping. The screenshot is shown on the landing page theme card.
 
 ### Build and test
 
