@@ -11,7 +11,7 @@
     "title": "Senior Full Stack Developer",
     "headline": "Building scalable web applications with modern JavaScript",
     "bio": "A passionate developer with 8+ years of experience building products that serve millions of users. I care deeply about developer experience, performance, and clean architecture. When I'm not coding, you'll find me rock climbing or brewing specialty coffee.",
-    "photo": "https://example.com/photo.jpg",
+    "photo": "https://i.sstatic.net/2fRi5z4Ml.png",
     "location": {
       "city": "San Francisco",
       "state": "California",
@@ -108,8 +108,8 @@
       "startDate": "2019-06",
       "endDate": "2022-02",
       "current": false,
-      "url": "https://startupxyz.example.com",
-      "logo": "",
+      "url": "https://example.com",
+      "logo": "https://i.sstatic.net/2fRi5z4Ml.png",
       "description": "Core developer at a Series A fintech startup building payment infrastructure.",
       "highlights": [
         "Built the merchant onboarding flow from scratch, reducing signup time from 2 days to 15 minutes",
@@ -127,7 +127,7 @@
       "endDate": "2019-05",
       "current": false,
       "url": "",
-      "logo": "",
+      "logo": "https://i.sstatic.net/2fRi5z4Ml.png",
       "description": "Built responsive web applications for enterprise clients across healthcare, finance, and retail.",
       "highlights": [
         "Delivered 12+ client projects on time and within budget",
@@ -156,7 +156,7 @@
       "name": "DevDash",
       "tagline": "Developer productivity dashboard",
       "description": "An open-source developer dashboard that aggregates GitHub activity, CI/CD pipeline status, and infrastructure monitoring into a single real-time view. Built for teams that want visibility without context-switching.",
-      "thumbnail": "projects/devdash.png",
+      "thumbnail": "https://i.sstatic.net/2fRi5z4Ml.png",
       "liveUrl": "https://devdash.example.com",
       "repoUrl": "https://github.com/janedoe/devdash",
       "techStack": ["React", "Node.js", "GraphQL", "Redis", "WebSockets"],
