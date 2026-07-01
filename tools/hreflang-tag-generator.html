@@ -3,7 +3,7 @@ Hreflang Tag Generator
 Single-file client-side hreflang <link> tag generator.
 Built for One File Tools.
 -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,10 +11,7 @@ Built for One File Tools.
     <title>Hreflang Tag Generator - One File Tools</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
 
@@ -51,12 +48,12 @@ Built for One File Tools.
       body {
         font-family: var(--font-sans);
         background-color: var(--bg);
-        background-image:
-          radial-gradient(circle at 15% 50%, rgba(16, 185, 129, 0.05), transparent 25%),
-          radial-gradient(circle at 85% 30%, rgba(59, 130, 246, 0.05), transparent 25%),
-          linear-gradient(var(--grid-line) 1px, transparent 1px),
-          linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-        background-size: 100% 100%, 100% 100%, 32px 32px, 32px 32px;
+        background-image: radial-gradient(circle at 15% 50%, rgba(16, 185, 129, 0.05), transparent 25%), radial-gradient(circle at 85% 30%, rgba(59, 130, 246, 0.05), transparent 25%), linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+        background-size:
+          100% 100%,
+          100% 100%,
+          32px 32px,
+          32px 32px;
         color: var(--text);
         padding: 48px 20px 80px;
         min-height: 100vh;
@@ -498,9 +495,15 @@ Built for One File Tools.
             "url url"
             "remove remove";
         }
-        .lang-row .field:nth-child(1) { grid-area: lang; }
-        .lang-row .field:nth-child(2) { grid-area: region; }
-        .lang-row .field:nth-child(3) { grid-area: url; }
+        .lang-row .field:nth-child(1) {
+          grid-area: lang;
+        }
+        .lang-row .field:nth-child(2) {
+          grid-area: region;
+        }
+        .lang-row .field:nth-child(3) {
+          grid-area: url;
+        }
         .btn-remove-row {
           grid-area: remove;
           margin-top: 4px;
@@ -561,13 +564,7 @@ Built for One File Tools.
           <div id="xDefaultWrapper">
             <div class="field">
               <label for="xDefaultUrl">x-default URL</label>
-              <input
-                type="text"
-                id="xDefaultUrl"
-                placeholder="https://example.com"
-                autocomplete="off"
-                spellcheck="false"
-              />
+              <input type="text" id="xDefaultUrl" placeholder="https://example.com" autocomplete="off" spellcheck="false" />
               <div class="field-error" id="xDefaultUrlError"></div>
             </div>
           </div>
@@ -614,8 +611,8 @@ Built for One File Tools.
          ========================================================== */
 
       // ---- Constants ----------------------------------------------------
-      const LANGUAGE_CODE_PATTERN = /^[a-z]{2}$/;      // ISO 639-1
-      const REGION_CODE_PATTERN = /^[A-Z]{2}$/;        // ISO 3166-1 alpha-2
+      const LANGUAGE_CODE_PATTERN = /^[a-z]{2}$/; // ISO 639-1
+      const REGION_CODE_PATTERN = /^[A-Z]{2}$/; // ISO 3166-1 alpha-2
 
       // ---- DOM References -------------------------------------------------
       const rowsContainer = document.getElementById("rowsContainer");
@@ -833,7 +830,7 @@ Built for One File Tools.
           entries.push({
             language: langValue,
             region: regionValue,
-            url: urlValue,
+            url: urlValue
           });
         });
 
@@ -858,11 +855,7 @@ Built for One File Tools.
 
       /** Escapes characters that have special meaning inside an HTML attribute. */
       function escapeHtmlAttribute(value) {
-        return value
-          .replace(/&/g, "&amp;")
-          .replace(/"/g, "&quot;")
-          .replace(/</g, "&lt;")
-          .replace(/>/g, "&gt;");
+        return value.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
       }
 
       // ---- Tag Generation ------------------------------------------------
